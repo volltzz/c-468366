@@ -42,12 +42,12 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       
-      {/* Hero Section - Update top padding to account for navigation */}
+      {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container px-4 pt-40 pb-20 text-center" // Updated pt-32 to pt-40
+        className="container px-4 pt-40 pb-20 text-center"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -85,7 +85,7 @@ const Index = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
           <Button size="lg" className="button-gradient">
             Get Started Free
@@ -94,6 +94,22 @@ const Index = () => {
           <Button size="lg" variant="outline" className="glass glass-hover">
             View Demo
           </Button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="relative mx-auto max-w-5xl"
+        >
+          <div className="glass rounded-xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              alt="EmailAI Dashboard"
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent bottom-0 h-16" />
         </motion.div>
       </motion.section>
 
