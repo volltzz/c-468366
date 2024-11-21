@@ -53,7 +53,7 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="inline-block mb-4 px-4 py-1.5 rounded-full glass"
+          className="inline-block mb-4 px-4 py-1.5 glass"
         >
           <span className="text-sm font-medium">
             <Command className="w-4 h-4 inline-block mr-2" />
@@ -102,7 +102,7 @@ const Index = () => {
           transition={{ delay: 0.6 }}
           className="relative mx-auto max-w-5xl"
         >
-          <div className="glass rounded-xl overflow-hidden">
+          <div className="glass overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
               alt="EmailAI Dashboard"
@@ -123,7 +123,7 @@ const Index = () => {
               transition={{ delay: 0.2 + index * 0.1 }}
             >
               <Card className="p-6 glass glass-hover h-full">
-                <div className="mb-4 p-2 w-12 h-12 rounded-lg glass flex items-center justify-center text-primary">
+                <div className="mb-4 p-2 w-12 h-12 glass flex items-center justify-center text-primary">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
@@ -140,7 +140,7 @@ const Index = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="glass rounded-2xl p-8 md:p-12 text-center"
+          className="glass p-8 md:p-12 text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to transform your inbox?
