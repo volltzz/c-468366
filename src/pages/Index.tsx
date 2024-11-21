@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Code2, Command, LineChart, Mail, MessageSquare, Settings, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
 
 const features = [
   {
@@ -39,12 +40,14 @@ const features = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
+      <Navigation />
+      
+      {/* Hero Section - Update top padding to account for navigation */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container px-4 pt-32 pb-20 text-center"
+        className="container px-4 pt-40 pb-20 text-center" // Updated pt-32 to pt-40
       >
         <motion.div
           initial={{ opacity: 0 }}
