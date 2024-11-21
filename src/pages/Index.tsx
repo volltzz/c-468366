@@ -55,8 +55,8 @@ const Index = () => {
           transition={{ delay: 0.2 }}
           className="inline-block mb-4 px-4 py-1.5 glass"
         >
-          <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#22c55e] to-primary bg-[length:200%_auto] animate-gradient">
-            <Command className="w-4 h-4 inline-block mr-2 text-primary" />
+          <span className="text-sm font-medium">
+            <Command className="w-4 h-4 inline-block mr-2" />
             AI-powered email management
           </span>
         </motion.div>
