@@ -25,7 +25,7 @@
     --border: 0 0% 12%;
     --input: 0 0% 12%;
     --ring: 142 84% 58%;
-    --radius: 0;
+    --radius: 0.75rem;
   }
 }
 
@@ -36,17 +36,6 @@
   body {
     @apply bg-background text-foreground font-inter antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
-  }
-}
-
-@layer utilities {
-  .animate-text-gradient {
-    animation: text-gradient 8s linear infinite;
-  }
-  @keyframes text-gradient {
-    to {
-      background-position: 200% center;
-    }
   }
 }
 
