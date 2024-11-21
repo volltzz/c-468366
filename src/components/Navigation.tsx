@@ -26,12 +26,18 @@ const Navigation = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "h-16 bg-background/80 backdrop-blur-lg" : "h-20 bg-transparent"
+        isScrolled 
+          ? "h-16 bg-background/80 backdrop-blur-lg" 
+          : "h-20 bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 h-full">
+      <div className={`mx-auto h-full transition-all duration-300 ${
+        isScrolled ? "max-w-3xl px-4" : "container px-4"
+      }`}>
         <nav className="flex items-center justify-between h-full">
-          <div className="flex items-center gap-2">
+          <div className={`flex items-center gap-2 transition-all duration-300 ${
+            isScrolled ? "scale-90" : ""
+          }`}>
             <Command className="w-6 h-6 text-primary" />
             <span className="font-bold text-lg">EmailAI</span>
           </div>
@@ -42,12 +48,18 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-sm text-muted-foreground hover:text-foreground transition-all duration-300 ${
+                  isScrolled ? "scale-90" : ""
+                }`}
               >
                 {item.name}
               </a>
             ))}
-            <Button className="button-gradient">Get Started</Button>
+            <Button className={`button-gradient transition-all duration-300 ${
+              isScrolled ? "scale-90" : ""
+            }`}>
+              Get Started
+            </Button>
           </div>
 
           {/* Mobile Navigation */}
