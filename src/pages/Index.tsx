@@ -109,7 +109,6 @@ const Index = () => {
               className="w-full h-auto"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent bottom-0 h-16" />
         </motion.div>
       </motion.section>
 
