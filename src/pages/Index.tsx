@@ -106,7 +106,7 @@ const Index = () => {
           <div className="glass rounded-xl overflow-hidden">
             <div className="relative">
               <DotLottieReact
-                src="https://lottie.host/2e8d6e57-9b24-4a11-8d4b-ad8ceee0d671/1AJtZvYFOe.lottie"
+                src="https://lottie.host/embed/2e8d6e57-9b24-4a11-8d4b-ad8ceee0d671/1AJtZvYFOe.json"
                 autoplay
                 loop
                 className="w-full h-[400px] object-cover"
