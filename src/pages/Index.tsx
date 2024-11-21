@@ -3,7 +3,6 @@ import { ArrowRight, Code2, Command, LineChart, Mail, MessageSquare, Settings, Z
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const features = [
   {
@@ -104,15 +103,11 @@ const Index = () => {
           className="relative mx-auto max-w-5xl"
         >
           <div className="glass rounded-xl overflow-hidden">
-            <div className="relative">
-              <DotLottieReact
-                src="https://assets9.lottiefiles.com/private_files/lf30_TBKozE.json"
-                autoplay
-                loop
-                className="w-full h-[400px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-            </div>
+            <img
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              alt="EmailAI Dashboard"
+              className="w-full h-auto"
+            />
           </div>
         </motion.div>
       </motion.section>
