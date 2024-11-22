@@ -27,7 +27,7 @@ const Navigation = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "h-14 bg-background/80 backdrop-blur-lg scale-95 mx-auto max-w-3xl rounded-full" 
+          ? "h-14 bg-background/40 backdrop-blur-xl border-b border-white/10 scale-95 mx-auto max-w-3xl" 
           : "h-20 bg-transparent"
       }`}
     >
