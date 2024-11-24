@@ -3,19 +3,23 @@ import { ArrowRight, Command } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const features = [
   {
     title: "Fully white-labelled",
-    description: "From logo, colors to domain name, customize everything to fit your brand. Run your business your way, on your terms."
+    description: "From logo, colors to domain name, customize everything to fit your brand. Run your business your way, on your terms.",
+    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
   },
   {
     title: "Work with tasks, files and comments",
-    description: "Communication starts with a well defined task. Orchestra allows you to write a meaningful description and add comments and share files right from the task itself."
+    description: "Communication starts with a well defined task. Orchestra allows you to write a meaningful description and add comments and share files right from the task itself.",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
   },
   {
     title: "Subscription management",
-    description: "Easily offer a way to your clients to control their subscription. From pausing, cancelling to resuming, Orchestra handles it all by default."
+    description: "Easily offer a way to your clients to control their subscription. From pausing, cancelling to resuming, Orchestra handles it all by default.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
   }
 ];
 
@@ -97,22 +101,50 @@ const Index = () => {
 
       {/* Features Section */}
       <section className="container px-4 py-20">
-        <div className="grid grid-cols-1 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 + index * 0.1 }}
-              className="relative"
-            >
-              <div className="max-w-xl">
-                <h3 className="text-2xl font-medium mb-4">{feature.title}</h3>
-                <p className="text-gray-400 text-lg leading-relaxed">{feature.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <Tabs defaultValue={features[0].title} className="w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="space-y-8">
+              <TabsList className="flex flex-col space-y-4 bg-transparent w-full">
+                {features.map((feature, index) => (
+                  <TabsTrigger
+                    key={index}
+                    value={feature.title}
+                    className="w-full text-left px-4 py-6 glass glass-hover data-[state=active]:bg-white/10"
+                  >
+                    <div>
+                      <h3 className="text-2xl font-medium mb-2">{feature.title}</h3>
+                      <p className="text-gray-400 text-base leading-relaxed">{feature.description}</p>
+                    </div>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+            
+            <div className="relative h-[400px] lg:h-full min-h-[400px]">
+              {features.map((feature, index) => (
+                <TabsContent
+                  key={index}
+                  value={feature.title}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full h-full"
+                  >
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      className="w-full h-full object-cover rounded-xl glass"
+                    />
+                  </motion.div>
+                </TabsContent>
+              ))}
+            </div>
+          </div>
+        </Tabs>
       </section>
 
       {/* CTA Section */}
