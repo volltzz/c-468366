@@ -17,9 +17,16 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (sectionId === 'testimonials') {
+      const heading = document.querySelector('h2.text-5xl.font-normal');
+      if (heading) {
+        heading.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
