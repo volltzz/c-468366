@@ -80,11 +80,14 @@ const Index = () => {
           transition={{ delay: 0.6 }}
           className="relative mx-auto max-w-5xl mt-20"
         >
-          <div className="glass rounded-xl overflow-hidden">
+          <div className="glass rounded-xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent animate-pulse" />
+            <div className="absolute inset-0 border border-primary/30 rounded-xl" />
+            <div className="absolute -inset-[1px] border border-primary/20 rounded-xl blur-sm" />
             <img
               src="/lovable-uploads/c32c6788-5e4a-4fee-afee-604b03113c7f.png"
               alt="CryptoTrade Dashboard"
-              className="w-full h-auto"
+              className="w-full h-auto relative z-10"
             />
           </div>
         </motion.div>
