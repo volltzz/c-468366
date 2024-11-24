@@ -1,31 +1,45 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Command } from "lucide-react";
+import { ArrowRight, Code2, Command, LineChart, Mail, MessageSquare, Settings, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const features = [
   {
-    title: "Fully white-labelled",
-    description: "From logo, colors to domain name, customize everything to fit your brand. Run your business your way, on your terms.",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+    icon: <Mail className="w-6 h-6" />,
+    title: "Smart Inbox",
+    description: "AI-powered email organization that adapts to your workflow."
   },
   {
-    title: "Work with tasks, files and comments",
-    description: "Communication starts with a well defined task. Orchestra allows you to write a meaningful description and add comments and share files right from the task itself.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    icon: <Zap className="w-6 h-6" />,
+    title: "Instant Impact",
+    description: "Get immediate insights and take action faster than ever."
   },
   {
-    title: "Subscription management",
-    description: "Easily offer a way to your clients to control their subscription. From pausing, cancelling to resuming, Orchestra handles it all by default.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    icon: <Code2 className="w-6 h-6" />,
+    title: "Developer Friendly",
+    description: "Built for developers, by developers. Full API access included."
+  },
+  {
+    icon: <LineChart className="w-6 h-6" />,
+    title: "Analytics",
+    description: "Deep insights into your email patterns and productivity."
+  },
+  {
+    icon: <MessageSquare className="w-6 h-6" />,
+    title: "Smart Replies",
+    description: "Context-aware response suggestions that sound like you."
+  },
+  {
+    icon: <Settings className="w-6 h-6" />,
+    title: "Customizable",
+    description: "Tailor the experience to match your unique workflow."
   }
 ];
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       
       {/* Hero Section */}
@@ -43,39 +57,40 @@ const Index = () => {
         >
           <span className="text-sm font-medium">
             <Command className="w-4 h-4 inline-block mr-2" />
-            AI-powered client portal
+            AI-powered email management
           </span>
         </motion.div>
         
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl font-normal mb-6 tracking-tight"
+            className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left"
           >
-            Your own first-class
+            <span className="text-gray-400">All your business email</span>
             <br />
-            client portal experience
+            <span className="text-white font-medium">Under one roof</span>
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl text-left"
           >
-            Orchestra comes out-of-the-box with a customizable client portal with your domain name and branding. A place you can call your own.
+            Accept payments, manage tasks, communicate with your clients, and offer them the best service possible with your very own client portal.{" "}
+            <span className="text-white">Set up in less than 5 minutes.</span>
           </motion.p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 items-center justify-center"
+            className="flex flex-col sm:flex-row gap-4 items-start"
           >
-            <Button size="lg" className="button-gradient rounded-lg">
-              Get started free
+            <Button size="lg" className="button-gradient">
+              Set up your service
             </Button>
             <Button size="lg" variant="link" className="text-white">
               See our guides <ArrowRight className="ml-2 w-4 h-4" />
@@ -91,60 +106,34 @@ const Index = () => {
         >
           <div className="glass rounded-xl overflow-hidden">
             <img
-              src="/lovable-uploads/0d0a5385-68cb-437d-9407-8a0d2cec2569.png"
-              alt="Orchestra Dashboard"
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              alt="EmailAI Dashboard"
               className="w-full h-auto"
             />
           </div>
         </motion.div>
       </motion.section>
 
-      {/* Features Section */}
+      {/* Features Grid */}
       <section className="container px-4 py-20">
-        <Tabs defaultValue={features[0].title} className="w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-20">
-            <div className="relative h-[600px] lg:h-[700px] rounded-3xl overflow-hidden">
-              {features.map((feature, index) => (
-                <TabsContent
-                  key={index}
-                  value={feature.title}
-                  className="absolute inset-0 w-full h-full"
-                >
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-full h-full"
-                  >
-                    <img
-                      src={feature.image}
-                      alt={feature.title}
-                      className="w-full h-full object-cover rounded-3xl glass"
-                    />
-                  </motion.div>
-                </TabsContent>
-              ))}
-            </div>
-
-            <div className="space-y-6">
-              <TabsList className="flex flex-col space-y-6 bg-transparent w-full">
-                {features.map((feature, index) => (
-                  <TabsTrigger
-                    key={index}
-                    value={feature.title}
-                    className="w-full text-left px-8 py-8 glass glass-hover data-[state=active]:bg-white/10 rounded-2xl transition-all duration-300"
-                  >
-                    <div className="border-l-2 border-transparent data-[state=active]:border-primary pl-6">
-                      <h3 className="text-2xl font-medium mb-3">{feature.title}</h3>
-                      <p className="text-gray-400 text-base leading-relaxed pr-8">{feature.description}</p>
-                    </div>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
-          </div>
-        </Tabs>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 + index * 0.1 }}
+            >
+              <Card className="p-6 glass glass-hover h-full">
+                <div className="mb-4 p-2 w-12 h-12 rounded-lg glass flex items-center justify-center text-primary">
+                  {feature.icon}
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* CTA Section */}
@@ -156,10 +145,10 @@ const Index = () => {
           className="glass rounded-2xl p-8 md:p-12 text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to transform your client experience?
+            Ready to transform your inbox?
           </h2>
-          <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals who have already upgraded their client portal experience.
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Join thousands of professionals who have already upgraded their email experience.
           </p>
           <Button size="lg" className="button-gradient">
             Get Started Free
