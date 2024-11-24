@@ -16,9 +16,16 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
-    { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Features", href: "#features", onClick: () => scrollToSection('features') },
+    { name: "Pricing", href: "#pricing", onClick: () => scrollToSection('pricing') },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
@@ -44,6 +51,14 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (item.onClick) {
+                    item.onClick();
+                  } else {
+                    window.location.href = item.href;
+                  }
+                }}
                 className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
               >
                 {item.name}
@@ -69,7 +84,15 @@ const Navigation = () => {
                       key={item.name}
                       href={item.href}
                       className="text-lg text-muted-foreground hover:text-foreground transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsMobileMenuOpen(false);
+                        if (item.onClick) {
+                          item.onClick();
+                        } else {
+                          window.location.href = item.href;
+                        }
+                      }}
                     >
                       {item.name}
                     </a>
