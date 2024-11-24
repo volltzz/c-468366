@@ -95,7 +95,6 @@ const Index = () => {
             <Button size="lg" variant="link" className="text-white">
               See our guides <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
-            <span className="text-sm text-gray-400 mt-2">Free until your first subscriber</span>
           </motion.div>
         </div>
 
