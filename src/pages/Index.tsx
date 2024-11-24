@@ -89,7 +89,7 @@ const Index = () => {
             transition={{ delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 items-start"
           >
-            <Button size="lg" className="button-gradient">
+            <Button size="lg" className="button-gradient rounded-lg">
               Set up your service
             </Button>
             <Button size="lg" variant="link" className="text-white">
