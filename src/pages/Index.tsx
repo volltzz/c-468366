@@ -111,7 +111,7 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="container px-4 py-20 relative">
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-20">
           <img 
             src="/lovable-uploads/a2c0bb3a-a47b-40bf-ba26-d79f2f9e741b.png" 
             alt="" 
