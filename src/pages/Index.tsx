@@ -16,12 +16,11 @@ const Index = () => {
         transition={{ duration: 0.5 }}
         className="relative container px-4 pt-40 pb-20"
       >
-        {/* Gradient Background */}
+        {/* Background */}
         <div 
           className="absolute inset-0 -z-10"
           style={{
-            background: 'radial-gradient(circle at bottom right, rgb(34, 197, 94) 0%, rgb(0, 0, 0) 85%)',
-            opacity: 0.5,
+            backgroundColor: '#000000',
           }}
         />
         
