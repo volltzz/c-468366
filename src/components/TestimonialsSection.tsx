@@ -43,8 +43,19 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 overflow-hidden bg-gradient-to-b from-background to-black">
-      <div className="container px-4">
+    <section className="py-20 overflow-hidden bg-gradient-to-b from-background to-black relative">
+      {/* Grid Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/ea459aa6-3b50-40e4-91fa-535bd11dd466.png" 
+          alt=""
+          className="w-full h-full object-cover opacity-[0.15]"
+        />
+        {/* Gradient overlays for fade effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black" />
+      </div>
+
+      <div className="container px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
