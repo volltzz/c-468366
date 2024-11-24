@@ -47,7 +47,7 @@ const Index = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container px-4 pt-40 pb-20 text-center"
+        className="container px-4 pt-40 pb-20"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -61,46 +61,49 @@ const Index = () => {
           </span>
         </motion.div>
         
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-4xl md:text-6xl font-bold mb-6 tracking-tight"
-        >
-          Your inbox,{" "}
-          <span className="text-gradient">already organized</span>
-        </motion.h1>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-        >
-          Experience email reimagined with AI. Smart organization, instant insights,
-          and powerful automation to help you focus on what matters.
-        </motion.p>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-        >
-          <Button size="lg" className="button-gradient">
-            Get Started Free
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
-          <Button size="lg" variant="outline" className="glass glass-hover">
-            View Demo
-          </Button>
-        </motion.div>
+        <div className="max-w-4xl">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left"
+          >
+            <span className="text-gray-400">All your business email</span>
+            <br />
+            <span className="text-white font-medium">Under one roof</span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl text-left"
+          >
+            Accept payments, manage tasks, communicate with your clients, and offer them the best service possible with your very own client portal.{" "}
+            <span className="text-white">Set up in less than 5 minutes.</span>
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4 items-start"
+          >
+            <Button size="lg" className="button-gradient">
+              Set up your service
+            </Button>
+            <Button size="lg" variant="link" className="text-white">
+              See our guides <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+            <span className="text-sm text-gray-400 mt-2">Free until your first subscriber</span>
+          </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="relative mx-auto max-w-5xl"
+          className="relative mx-auto max-w-5xl mt-20"
         >
           <div className="glass rounded-xl overflow-hidden">
             <img
