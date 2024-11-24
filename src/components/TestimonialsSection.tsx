@@ -43,39 +43,18 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="relative py-20 overflow-hidden">
-      {/* Globe Gradient Background */}
-      <div className="absolute inset-0 w-full h-full">
-        {/* Center dark gradient */}
+    <section className="py-20 overflow-hidden relative">
+      {/* Globe gradient background */}
+      <div className="absolute inset-0 bg-black">
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 opacity-40"
           style={{
-            background: 'radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0) 100%)',
+            background: 'radial-gradient(circle at 50% 50%, rgba(74,222,128,0.1) 0%, rgba(0,0,0,0) 70%)',
           }}
         />
-        {/* Left fade */}
-        <div 
-          className="absolute left-0 top-0 h-full w-1/4"
-          style={{
-            background: 'linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)',
-          }}
-        />
-        {/* Right fade */}
-        <div 
-          className="absolute right-0 top-0 h-full w-1/4"
-          style={{
-            background: 'linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)',
-          }}
-        />
-        {/* Grid lines for globe effect */}
-        <div 
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'url("/lovable-uploads/a820d14d-3665-4a22-a2fe-799a3a76d73e.png")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+        {/* Fade overlays */}
+        <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black to-transparent" />
+        <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black to-transparent" />
       </div>
 
       <div className="container px-4 relative z-10">
