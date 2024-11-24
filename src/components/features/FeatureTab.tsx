@@ -10,7 +10,7 @@ interface FeatureTabProps {
 
 export const FeatureTab = ({ icon, title, description, isActive }: FeatureTabProps) => {
   return (
-    <div className={`w-full flex items-center gap-4 p-4 rounded-lg transition-all duration-300 ${isActive ? 'glass' : 'hover:glass-hover'}`}>
+    <div className={`w-full flex items-center gap-4 p-4 rounded-lg border border-white/10 transition-all duration-300 ${isActive ? 'glass' : 'hover:glass-hover'}`}>
       <div className="p-2 rounded-lg glass flex items-center justify-center text-primary shrink-0">
         {icon}
       </div>
