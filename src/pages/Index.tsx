@@ -1,48 +1,8 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Command, LineChart, Mail, MessageSquare, Settings, Zap } from "lucide-react";
+import { ArrowRight, Command } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navigation from "@/components/Navigation";
-
-const features = [
-  {
-    icon: <Mail className="w-6 h-6" />,
-    title: "Smart Inbox",
-    description: "AI-powered email organization that adapts to your workflow.",
-    image: "https://images.unsplash.com/photo-1557568192-2fafc8b5bdc9?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    icon: <Zap className="w-6 h-6" />,
-    title: "Instant Impact",
-    description: "Get immediate insights and take action faster than ever.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    icon: <Code2 className="w-6 h-6" />,
-    title: "Developer Friendly",
-    description: "Built for developers, by developers. Full API access included.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    icon: <LineChart className="w-6 h-6" />,
-    title: "Analytics",
-    description: "Deep insights into your email patterns and productivity.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    icon: <MessageSquare className="w-6 h-6" />,
-    title: "Smart Replies",
-    description: "Context-aware response suggestions that sound like you.",
-    image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    icon: <Settings className="w-6 h-6" />,
-    title: "Customizable",
-    description: "Tailor the experience to match your unique workflow.",
-    image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1000&auto=format&fit=crop"
-  }
-];
+import { FeaturesSection } from "@/components/features/FeaturesSection";
 
 const Index = () => {
   return (
@@ -121,59 +81,8 @@ const Index = () => {
         </motion.div>
       </motion.section>
 
-      {/* Features Section with Tabs */}
-      <section className="container px-4 py-20">
-        <Tabs defaultValue={features[0].title} className="w-full">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            {/* Left side - Tab triggers */}
-            <div className="md:col-span-5">
-              <TabsList className="flex flex-col space-y-2 w-full bg-transparent">
-                {features.map((feature) => (
-                  <TabsTrigger
-                    key={feature.title}
-                    value={feature.title}
-                    className="w-full flex items-center gap-4 p-4 data-[state=active]:glass"
-                  >
-                    <div className="p-2 rounded-lg glass flex items-center justify-center text-primary">
-                      {feature.icon}
-                    </div>
-                    <div className="text-left">
-                      <h3 className="font-semibold">{feature.title}</h3>
-                      <p className="text-sm text-muted-foreground">{feature.description}</p>
-                    </div>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
-
-            {/* Right side - Tab content with images */}
-            <div className="md:col-span-7">
-              {features.map((feature) => (
-                <TabsContent
-                  key={feature.title}
-                  value={feature.title}
-                  className="mt-0 h-full"
-                >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="h-full"
-                  >
-                    <div className="glass rounded-xl overflow-hidden aspect-video">
-                      <img
-                        src={feature.image}
-                        alt={feature.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </motion.div>
-                </TabsContent>
-              ))}
-            </div>
-          </div>
-        </Tabs>
-      </section>
+      {/* Features Section */}
+      <FeaturesSection />
 
       {/* CTA Section */}
       <section className="container px-4 py-20">
