@@ -23,6 +23,13 @@ const Navigation = () => {
     }
   };
 
+  const scrollToBottomCTA = () => {
+    const ctaSection = document.querySelector('section:last-of-type');
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
     { name: "Markets", href: "#features", onClick: () => scrollToSection('features') },
     { name: "Trading Fees", href: "#pricing", onClick: () => scrollToSection('pricing') },
@@ -64,7 +71,7 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="button-gradient">
+            <Button className="button-gradient" onClick={scrollToBottomCTA}>
               Start Trading
             </Button>
           </div>
@@ -97,7 +104,12 @@ const Navigation = () => {
                       {item.name}
                     </a>
                   ))}
-                  <Button className="button-gradient mt-4">Start Trading</Button>
+                  <Button className="button-gradient mt-4" onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    scrollToBottomCTA();
+                  }}>
+                    Start Trading
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
