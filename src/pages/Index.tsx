@@ -14,7 +14,7 @@ const Index = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container relative px-4 pt-40 pb-20 animated-gradient"
+        className="container px-4 pt-40 pb-20"
       >
         <motion.div
           initial={{ opacity: 0 }}
