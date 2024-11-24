@@ -14,8 +14,19 @@ const Index = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container px-4 pt-40 pb-20"
+        className="relative container px-4 pt-40 pb-20"
       >
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: "url('/lovable-uploads/e143cef1-4ad0-404b-b47a-147e89bc017c.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.9,
+          }}
+        />
+        
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -28,14 +39,14 @@ const Index = () => {
           </span>
         </motion.div>
         
-        <div className="max-w-4xl">
+        <div className="max-w-4xl relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left"
           >
-            <span className="text-gray-400">All your business email</span>
+            <span className="text-gray-200">All your business email</span>
             <br />
             <span className="text-white font-medium">Under one roof</span>
           </motion.h1>
@@ -44,7 +55,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl text-left"
+            className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-left"
           >
             Accept payments, manage tasks, communicate with your clients, and offer them the best service possible with your very own client portal.{" "}
             <span className="text-white">Set up in less than 5 minutes.</span>
