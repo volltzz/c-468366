@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { LucideIcon } from "lucide-react";
+import { ReactNode } from "react";
 
 interface FeatureTabProps {
-  icon: React.ReactElement<LucideIcon>;
+  icon: ReactNode;
   title: string;
   description: string;
   isActive: boolean;
