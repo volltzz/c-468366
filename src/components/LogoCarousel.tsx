@@ -1,0 +1,50 @@
+import { motion } from "framer-motion";
+
+const LogoCarousel = () => {
+  const logos = [
+    "/lovable-uploads/5830bd79-3511-41dc-af6c-8db32d91fc2c.png",
+    "/lovable-uploads/bb50362c-6879-4868-bbc9-c6e051fd8d7d.png",
+    "/lovable-uploads/1e2a48dc-059b-4919-a1ed-44685d771a32.png",
+    "/lovable-uploads/bf56a0c6-48e4-49f7-b286-8e3fda9a3385.png",
+    "/lovable-uploads/7cc724d4-3e14-4e7c-9e7a-8d613fde54d0.png",
+  ];
+
+  return (
+    <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-12 mt-20">
+      <div className="relative flex items-center">
+        <motion.div
+          className="flex gap-16 items-center"
+          animate={{
+            x: [0, -1920],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          {/* First set of logos */}
+          {logos.map((logo, index) => (
+            <img
+              key={`logo-1-${index}`}
+              src={logo}
+              alt={`Partner logo ${index + 1}`}
+              className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
+            />
+          ))}
+          {/* Duplicate set of logos for seamless loop */}
+          {logos.map((logo, index) => (
+            <img
+              key={`logo-2-${index}`}
+              src={logo}
+              alt={`Partner logo ${index + 1}`}
+              className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
+            />
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default LogoCarousel;

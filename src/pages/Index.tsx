@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { FeaturesSection } from "@/components/features/FeaturesSection";
 import { PricingSection } from "@/components/pricing/PricingSection";
+import LogoCarousel from "@/components/LogoCarousel";
 
 const Index = () => {
   return (
@@ -89,6 +90,9 @@ const Index = () => {
           </div>
         </motion.div>
       </motion.section>
+
+      {/* Logo Carousel */}
+      <LogoCarousel />
 
       {/* Features Section */}
       <FeaturesSection />
