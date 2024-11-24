@@ -102,25 +102,25 @@ const Index = () => {
       {/* Features Section */}
       <section className="container px-4 py-20">
         <Tabs defaultValue={features[0].title} className="w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr,1.2fr] gap-20">
             <div className="space-y-6">
               <TabsList className="flex flex-col space-y-6 bg-transparent w-full">
                 {features.map((feature, index) => (
                   <TabsTrigger
                     key={index}
                     value={feature.title}
-                    className="w-full text-left px-8 py-10 glass glass-hover data-[state=active]:bg-white/10 rounded-2xl transition-all duration-300"
+                    className="w-full text-left px-8 py-8 glass glass-hover data-[state=active]:bg-white/10 rounded-2xl transition-all duration-300"
                   >
-                    <div>
-                      <h3 className="text-2xl font-medium mb-4">{feature.title}</h3>
-                      <p className="text-gray-400 text-base leading-relaxed pr-4">{feature.description}</p>
+                    <div className="border-l-2 border-transparent data-[state=active]:border-primary pl-6">
+                      <h3 className="text-2xl font-medium mb-3">{feature.title}</h3>
+                      <p className="text-gray-400 text-base leading-relaxed pr-8">{feature.description}</p>
                     </div>
                   </TabsTrigger>
                 ))}
               </TabsList>
             </div>
             
-            <div className="relative h-[600px] lg:h-full min-h-[600px] rounded-2xl overflow-hidden">
+            <div className="relative h-[600px] lg:h-[700px] rounded-3xl overflow-hidden">
               {features.map((feature, index) => (
                 <TabsContent
                   key={index}
@@ -137,7 +137,7 @@ const Index = () => {
                     <img
                       src={feature.image}
                       alt={feature.title}
-                      className="w-full h-full object-cover rounded-2xl glass"
+                      className="w-full h-full object-cover rounded-3xl glass"
                     />
                   </motion.div>
                 </TabsContent>
