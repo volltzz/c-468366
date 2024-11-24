@@ -23,21 +23,10 @@ const Navigation = () => {
     }
   };
 
-  const scrollToBottomCTA = () => {
-    const headings = document.querySelectorAll('h2');
-    const ctaHeading = Array.from(headings).find(
-      heading => heading.textContent === 'Ready to start trading?'
-    );
-    if (ctaHeading) {
-      ctaHeading.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const navItems = [
-    { name: "Markets", href: "#features", onClick: () => scrollToSection('features') },
-    { name: "Trading Fees", href: "#pricing", onClick: () => scrollToSection('pricing') },
-    { name: "About", href: "#about" },
-    { name: "Support", href: "#contact" },
+    { name: "Features", href: "#features", onClick: () => scrollToSection('features') },
+    { name: "Prices", href: "#pricing", onClick: () => scrollToSection('pricing') },
+    { name: "Testimonials", href: "#testimonials", onClick: () => scrollToSection('testimonials') },
   ];
 
   return (
@@ -65,8 +54,6 @@ const Navigation = () => {
                   e.preventDefault();
                   if (item.onClick) {
                     item.onClick();
-                  } else {
-                    window.location.href = item.href;
                   }
                 }}
                 className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
@@ -74,9 +61,6 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="button-gradient" onClick={scrollToBottomCTA}>
-              Start Trading
-            </Button>
           </div>
 
           {/* Mobile Navigation */}
@@ -99,20 +83,12 @@ const Navigation = () => {
                         setIsMobileMenuOpen(false);
                         if (item.onClick) {
                           item.onClick();
-                        } else {
-                          window.location.href = item.href;
                         }
                       }}
                     >
                       {item.name}
                     </a>
                   ))}
-                  <Button className="button-gradient mt-4" onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    scrollToBottomCTA();
-                  }}>
-                    Start Trading
-                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
