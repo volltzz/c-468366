@@ -18,9 +18,11 @@ const Navigation = () => {
 
   const scrollToSection = (sectionId: string) => {
     if (sectionId === 'testimonials') {
-      const heading = document.querySelector('h2.text-5xl.font-normal');
-      if (heading) {
-        heading.scrollIntoView({ behavior: 'smooth' });
+      const testimonialSection = document.querySelector('.animate-marquee');
+      if (testimonialSection) {
+        const yOffset = -100; // Offset to account for the fixed header
+        const y = testimonialSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
       }
     } else {
       const element = document.getElementById(sectionId);
