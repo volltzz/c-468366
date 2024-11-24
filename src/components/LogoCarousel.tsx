@@ -45,10 +45,23 @@ const LogoCarousel = () => {
               whileHover={{ opacity: 1 }}
             />
           ))}
-          {/* Duplicate set of logos for seamless loop */}
+          {/* Second set of logos */}
           {logos.map((logo, index) => (
             <motion.img
               key={`logo-2-${index}`}
+              src={logo}
+              alt={`Partner logo ${index + 1}`}
+              className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ opacity: 1 }}
+            />
+          ))}
+          {/* Third set of logos */}
+          {logos.map((logo, index) => (
+            <motion.img
+              key={`logo-3-${index}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
               className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
