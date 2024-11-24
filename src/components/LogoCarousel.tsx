@@ -16,25 +16,60 @@ const LogoCarousel = () => {
           <motion.div
             className="flex gap-16 items-center"
             animate={{
-              x: [0, -100],
-              transition: {
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 20,
-                  ease: "linear",
-                },
-              },
+              x: "-100%",
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
             }}
             style={{
               width: "max-content",
+              paddingLeft: "100%",
             }}
           >
-            {[...Array(4)].map((_, setIndex) => (
+            {[...Array(2)].map((_, setIndex) => (
               <div key={`set-${setIndex}`} className="flex gap-16 items-center">
                 {logos.map((logo, index) => (
                   <motion.img
                     key={`logo-${setIndex}-${index}`}
+                    src={logo}
+                    alt={`Partner logo ${index + 1}`}
+                    className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.5 }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ opacity: 1 }}
+                  />
+                ))}
+              </div>
+            ))}
+          </motion.div>
+          
+          {/* Second carousel for continuous effect */}
+          <motion.div
+            className="flex gap-16 items-center absolute top-0 left-0"
+            animate={{
+              x: "0%",
+            }}
+            initial={{
+              x: "-200%",
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            style={{
+              width: "max-content",
+              paddingLeft: "100%",
+            }}
+          >
+            {[...Array(2)].map((_, setIndex) => (
+              <div key={`set2-${setIndex}`} className="flex gap-16 items-center">
+                {logos.map((logo, index) => (
+                  <motion.img
+                    key={`logo2-${setIndex}-${index}`}
                     src={logo}
                     alt={`Partner logo ${index + 1}`}
                     className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
