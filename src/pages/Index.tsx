@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-foreground">
+    <div className="min-h-screen bg-black text-foreground">
       <Navigation />
       
       {/* Hero Section */}
@@ -94,22 +94,22 @@ const Index = () => {
       <LogoCarousel />
 
       {/* Features Section */}
-      <div id="features" className="bg-[#0A0A0A]">
+      <div id="features" className="bg-black">
         <FeaturesSection />
       </div>
 
       {/* Pricing Section */}
-      <div id="pricing" className="bg-[#0A0A0A]">
+      <div id="pricing" className="bg-black">
         <PricingSection />
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-[#0A0A0A]">
+      <div className="bg-black">
         <TestimonialsSection />
       </div>
 
       {/* CTA Section */}
-      <section className="container px-4 py-20 relative bg-[#0A0A0A]">
+      <section className="container px-4 py-20 relative bg-black">
         <div 
           className="absolute inset-0 opacity-40"
           style={{
@@ -138,7 +138,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <div className="bg-[#0A0A0A]">
+      <div className="bg-black">
         <Footer />
       </div>
     </div>
