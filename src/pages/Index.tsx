@@ -95,10 +95,14 @@ const Index = () => {
       <LogoCarousel />
 
       {/* Features Section */}
-      <FeaturesSection />
+      <div id="features">
+        <FeaturesSection />
+      </div>
 
       {/* Pricing Section */}
-      <PricingSection />
+      <div id="pricing">
+        <PricingSection />
+      </div>
 
       {/* CTA Section */}
       <section className="container px-4 py-20">
