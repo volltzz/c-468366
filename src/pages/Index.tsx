@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import { FeaturesSection } from "@/components/features/FeaturesSection";
 import { PricingSection } from "@/components/pricing/PricingSection";
 import LogoCarousel from "@/components/LogoCarousel";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -124,6 +125,9 @@ const Index = () => {
           </Button>
         </motion.div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
