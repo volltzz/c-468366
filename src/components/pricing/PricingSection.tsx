@@ -37,7 +37,7 @@ const PricingTier = ({
           </li>
         ))}
       </ul>
-      <Button className={isPopular ? "button-gradient w-full" : "w-full"} variant={isPopular ? "default" : "outline"}>
+      <Button className="button-gradient w-full">
         Start Trading
       </Button>
     </div>
