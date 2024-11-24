@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <footer className="w-full py-12 mt-20">
       <div className="container px-4">
-        <div className="glass rounded-xl p-8">
+        <div className="glass glass-hover rounded-xl p-8">
+          {/* Company Info */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
