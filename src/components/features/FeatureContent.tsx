@@ -13,12 +13,12 @@ export const FeatureContent = ({ image, title }: FeatureContentProps) => {
       transition={{ duration: 0.5 }}
       className="h-full flex items-center justify-center"
     >
-      <div className="glass rounded-xl overflow-hidden aspect-video w-full relative">
+      <div className="glass rounded-xl overflow-hidden w-full relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover object-center relative z-10"
+          className="w-full h-full object-contain relative z-10"
         />
       </div>
     </motion.div>

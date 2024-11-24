@@ -1,28 +1,28 @@
-import { LineChart, Shield, Zap, Wallet } from "lucide-react";
+import { BarChart3, ShieldCheck, Wallet, ArrowUpDown } from "lucide-react";
 
 export const features = [
   {
-    icon: <LineChart className="w-6 h-6" />,
-    title: "Advanced Trading Tools",
-    description: "Professional-grade charting tools with real-time market data and technical indicators.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop"
+    title: "Advanced Trading Interface",
+    description: "Professional-grade trading tools with real-time market data and advanced charting capabilities.",
+    icon: BarChart3,
+    image: "/lovable-uploads/7335619d-58a9-41ad-a233-f7826f56f3e9.png"
   },
   {
-    icon: <Shield className="w-6 h-6" />,
-    title: "Secure Trading",
-    description: "Industry-leading security measures to protect your assets and transactions.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop"
+    title: "Portfolio Management",
+    description: "Track your investments and monitor your gains with our comprehensive portfolio dashboard.",
+    icon: Wallet,
+    image: "/lovable-uploads/86329743-ee49-4f2e-96f7-50508436273d.png"
   },
   {
-    icon: <Zap className="w-6 h-6" />,
-    title: "Instant Execution",
-    description: "Lightning-fast trade execution with advanced order types and deep liquidity.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1000&auto=format&fit=crop"
+    title: "Security & Verification",
+    description: "Industry-leading security measures with KYC verification process to protect your assets.",
+    icon: ShieldCheck,
+    image: "/lovable-uploads/b6436838-5c1a-419a-9cdc-1f9867df073d.png"
   },
   {
-    icon: <Wallet className="w-6 h-6" />,
-    title: "Multi-Asset Wallet",
-    description: "Secure wallet integration supporting multiple cryptocurrencies and tokens.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1000&auto=format&fit=crop"
+    title: "Performance Analytics",
+    description: "Detailed analytics and credit scoring system to help you make informed decisions.",
+    icon: ArrowUpDown,
+    image: "/lovable-uploads/79f2b901-8a4e-42a5-939f-fae0828e0aef.png"
   }
 ];
