@@ -43,40 +43,44 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="py-20 overflow-hidden bg-gradient-to-b from-background to-black">
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Our Clients Feedback</h2>
-          <p className="text-muted-foreground">
-            See what our clients have to say about their experience
+          <h2 className="text-5xl font-normal mb-4">Our Clients Feedback</h2>
+          <p className="text-muted-foreground text-lg">
+            SafeShield offers a comprehensive solution for securing data
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+                ease: "easeOut"
+              }}
             >
-              <Card className="glass glass-hover p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Avatar>
+              <Card className="bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <Avatar className="h-12 w-12">
                     <AvatarImage src={testimonial.image} />
                     <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <h4 className="font-medium">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <h4 className="font-medium text-white/90">{testimonial.name}</h4>
+                    <p className="text-sm text-white/60">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-white/70 leading-relaxed">
                   {testimonial.content}
                 </p>
               </Card>
