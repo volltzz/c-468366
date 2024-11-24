@@ -11,17 +11,21 @@ const LogoCarousel = () => {
 
   return (
     <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-12 mt-20">
-      <div className="relative flex items-center">
+      <div className="relative flex">
         <motion.div
           className="flex gap-16 items-center"
           animate={{
-            x: ["0%", "-50%"]
+            x: [0, -1035]
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear",
             repeatType: "loop"
+          }}
+          style={{
+            width: "fit-content",
+            display: "flex"
           }}
         >
           {/* First set of logos */}
