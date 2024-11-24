@@ -7,6 +7,7 @@ import { PricingSection } from "@/components/pricing/PricingSection";
 import LogoCarousel from "@/components/LogoCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const Index = () => {
   return (
@@ -38,16 +39,15 @@ const Index = () => {
         </motion.div>
         
         <div className="max-w-4xl relative z-10">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left"
-          >
-            <span className="text-gray-200">Trade crypto with</span>
+          <h1 className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left">
+            <span className="text-gray-200">
+              <TextGenerateEffect words="Trade crypto with" />
+            </span>
             <br />
-            <span className="text-white font-medium">confidence & security</span>
-          </motion.h1>
+            <span className="text-white font-medium">
+              <TextGenerateEffect words="confidence & security" />
+            </span>
+          </h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
