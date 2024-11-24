@@ -3,6 +3,7 @@ import { ArrowRight, Command } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { FeaturesSection } from "@/components/features/FeaturesSection";
+import { PricingSection } from "@/components/pricing/PricingSection";
 
 const Index = () => {
   return (
@@ -91,6 +92,9 @@ const Index = () => {
 
       {/* Features Section */}
       <FeaturesSection />
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* CTA Section */}
       <section className="container px-4 py-20">
