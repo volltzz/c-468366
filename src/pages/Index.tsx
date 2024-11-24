@@ -110,12 +110,19 @@ const Index = () => {
       <TestimonialsSection />
 
       {/* CTA Section */}
-      <section className="container px-4 py-20">
+      <section className="container px-4 py-20 relative">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="/lovable-uploads/a2c0bb3a-a47b-40bf-ba26-d79f2f9e741b.png" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="glass rounded-2xl p-8 md:p-12 text-center"
+          className="glass rounded-2xl p-8 md:p-12 text-center relative z-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to transform your inbox?
