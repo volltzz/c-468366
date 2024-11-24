@@ -4,40 +4,40 @@ import { Card } from "./ui/card";
 
 const testimonials = [
   {
-    name: "Michael Brown",
-    role: "IT Director at HealthCare",
+    name: "Michael Chen",
+    role: "Professional Trader",
     image: "https://avatars.githubusercontent.com/u/1234567?v=4",
-    content: "The real-time threat detection and automated response features have significantly reduced our risk exposure. We now feel more confident than ever about our data security posture."
+    content: "The real-time market data and advanced trading features have significantly improved my trading performance. The platform's security measures give me peace of mind."
   },
   {
     name: "Sarah Johnson",
-    role: "CTO at TechCorp",
+    role: "Crypto Fund Manager",
     image: "https://avatars.githubusercontent.com/u/2345678?v=4",
-    content: "Implementing this solution has transformed our email management workflow. The AI-powered features have saved us countless hours and improved accuracy significantly."
+    content: "CryptoTrade's institutional-grade tools have transformed our trading strategy. The API integration and automated features have saved us countless hours."
   },
   {
     name: "David Wilson",
-    role: "Founder at Innovate",
+    role: "Early Crypto Investor",
     image: "https://avatars.githubusercontent.com/u/3456789?v=4",
-    content: "The customer support is exceptional, and the platform's intuitive design made adoption across our team seamless. It's been a game-changer for our operations."
+    content: "The customer support is exceptional, and the platform's intuitive design made getting started with crypto trading seamless. A game-changer for both beginners and pros."
   },
   {
-    name: "Emily Chen",
-    role: "Operations Manager",
+    name: "Emily Zhang",
+    role: "DeFi Developer",
     image: "https://avatars.githubusercontent.com/u/4567890?v=4",
-    content: "We've seen a dramatic improvement in our response times and customer satisfaction since implementing this solution. The automation features are particularly impressive."
+    content: "We've seen remarkable improvements in our trading efficiency since switching to CryptoTrade. The smart order routing and liquidity aggregation are particularly impressive."
   },
   {
     name: "James Rodriguez",
-    role: "Head of IT Security",
+    role: "Crypto Security Expert",
     image: "https://avatars.githubusercontent.com/u/5678901?v=4",
-    content: "The security features are robust and the regular updates keep us ahead of emerging threats. It's exactly what we needed for our growing organization."
+    content: "The security features are robust and the regular updates keep us ahead of emerging threats. It's exactly what the crypto industry needed."
   },
   {
     name: "Lisa Thompson",
-    role: "Digital Director",
+    role: "Portfolio Manager",
     image: "https://avatars.githubusercontent.com/u/6789012?v=4",
-    content: "The platform's ability to handle complex workflows while maintaining simplicity in its interface is remarkable. It's been a valuable asset to our digital transformation."
+    content: "The platform's ability to handle complex trading strategies while maintaining simplicity in its interface is remarkable. It's been invaluable for our portfolio management."
   }
 ];
 
@@ -52,9 +52,9 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-normal mb-4">Our Clients Feedback</h2>
+          <h2 className="text-5xl font-normal mb-4">Trusted by Traders</h2>
           <p className="text-muted-foreground text-lg">
-            SafeShield offers a comprehensive solution for securing data
+            Join thousands of satisfied traders on CryptoTrade
           </p>
         </motion.div>
 

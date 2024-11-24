@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <h3 className="font-medium text-lg">Orchestra</h3>
+              <h3 className="font-medium text-lg">CryptoTrade</h3>
               <p className="text-sm text-muted-foreground">
-                Simplifying email management for businesses worldwide.
+                Empowering traders with advanced crypto trading solutions.
               </p>
               <div className="flex space-x-4">
                 <Button variant="ghost" size="icon">
@@ -26,16 +26,16 @@ const Footer = () => {
 
             {/* Product Links */}
             <div className="space-y-4">
-              <h4 className="font-medium">Product</h4>
+              <h4 className="font-medium">Trading</h4>
               <ul className="space-y-2">
                 <li>
                   <a href="#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Features
+                    Markets
                   </a>
                 </li>
                 <li>
                   <a href="#pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Pricing
+                    Trading Fees
                   </a>
                 </li>
               </ul>
@@ -47,12 +47,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Documentation
+                    Trading Guide
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Blog
+                    Market Analysis
                   </a>
                 </li>
               </ul>
@@ -78,7 +78,7 @@ const Footer = () => {
 
           <div className="mt-8 pt-8 border-t border-white/10">
             <p className="text-sm text-muted-foreground text-center">
-              © {new Date().getFullYear()} Orchestra. All rights reserved.
+              © {new Date().getFullYear()} CryptoTrade. All rights reserved.
             </p>
           </div>
         </div>

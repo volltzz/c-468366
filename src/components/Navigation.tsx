@@ -24,10 +24,10 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: "Features", href: "#features", onClick: () => scrollToSection('features') },
-    { name: "Pricing", href: "#pricing", onClick: () => scrollToSection('pricing') },
+    { name: "Markets", href: "#features", onClick: () => scrollToSection('features') },
+    { name: "Trading Fees", href: "#pricing", onClick: () => scrollToSection('pricing') },
     { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Support", href: "#contact" },
   ];
 
   return (
@@ -42,7 +42,7 @@ const Navigation = () => {
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
             <Command className="w-5 h-5 text-primary" />
-            <span className="font-bold text-base">EmailAI</span>
+            <span className="font-bold text-base">CryptoTrade</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button className="button-gradient">
-              Get Started
+              Start Trading
             </Button>
           </div>
 
@@ -97,7 +97,7 @@ const Navigation = () => {
                       {item.name}
                     </a>
                   ))}
-                  <Button className="button-gradient mt-4">Get Started</Button>
+                  <Button className="button-gradient mt-4">Start Trading</Button>
                 </div>
               </SheetContent>
             </Sheet>

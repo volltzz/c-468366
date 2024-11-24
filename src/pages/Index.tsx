@@ -33,7 +33,7 @@ const Index = () => {
         >
           <span className="text-sm font-medium">
             <Command className="w-4 h-4 inline-block mr-2" />
-            AI-powered email management
+            Next-gen crypto trading platform
           </span>
         </motion.div>
         
@@ -44,9 +44,9 @@ const Index = () => {
             transition={{ delay: 0.3 }}
             className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left"
           >
-            <span className="text-gray-200">All your business email</span>
+            <span className="text-gray-200">Trade crypto with</span>
             <br />
-            <span className="text-white font-medium">Under one roof</span>
+            <span className="text-white font-medium">confidence & security</span>
           </motion.h1>
           
           <motion.p 
@@ -55,8 +55,8 @@ const Index = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-left"
           >
-            Accept payments, manage tasks, communicate with your clients, and offer them the best service possible with your very own client portal.{" "}
-            <span className="text-white">Set up in less than 5 minutes.</span>
+            Experience seamless cryptocurrency trading with advanced features, real-time analytics, and institutional-grade security.{" "}
+            <span className="text-white">Start trading in minutes.</span>
           </motion.p>
           
           <motion.div
@@ -66,10 +66,10 @@ const Index = () => {
             className="flex flex-col sm:flex-row gap-4 items-start"
           >
             <Button size="lg" className="button-gradient">
-              Set up your service
+              Start Trading Now
             </Button>
             <Button size="lg" variant="link" className="text-white">
-              See our guides <ArrowRight className="ml-2 w-4 h-4" />
+              View Markets <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </motion.div>
         </div>
@@ -83,7 +83,7 @@ const Index = () => {
           <div className="glass rounded-xl overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-              alt="EmailAI Dashboard"
+              alt="CryptoTrade Dashboard"
               className="w-full h-auto"
             />
           </div>
@@ -125,13 +125,13 @@ const Index = () => {
           className="bg-[#0A0A0A]/80 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-12 text-center relative z-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to transform your inbox?
+            Ready to start trading?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals who have already upgraded their email experience.
+            Join thousands of traders who have already discovered the power of our platform.
           </p>
           <Button size="lg" className="button-gradient">
-            Get Started Free
+            Create Account
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </motion.div>
