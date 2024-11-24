@@ -57,10 +57,10 @@ export default {
         },
       },
       borderRadius: {
-        DEFAULT: "0",
-        lg: "0",
-        md: "0",
-        sm: "0",
+        DEFAULT: "var(--radius)",
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
         "accordion-down": {
