@@ -24,9 +24,12 @@ const Navigation = () => {
   };
 
   const scrollToBottomCTA = () => {
-    const ctaSection = document.querySelector('h2:contains("Ready to start trading?")');
-    if (ctaSection) {
-      ctaSection.scrollIntoView({ behavior: 'smooth' });
+    const headings = document.querySelectorAll('h2');
+    const ctaHeading = Array.from(headings).find(
+      heading => heading.textContent === 'Ready to start trading?'
+    );
+    if (ctaHeading) {
+      ctaHeading.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
