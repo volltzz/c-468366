@@ -5,24 +5,24 @@ import { features } from "@/config/features";
 
 export const FeaturesSection = () => {
   return (
-    <section className="container px-4 py-20">
+    <section className="container px-4 py-24">
       {/* Header Section */}
-      <div className="max-w-2xl mb-16">
-        <h2 className="text-4xl md:text-5xl font-normal mb-4 tracking-tight text-left">
+      <div className="max-w-2xl mb-20">
+        <h2 className="text-5xl md:text-6xl font-normal mb-6 tracking-tight text-left">
           Your own first-class
           <br />
-          client portal experience
+          <span className="text-gradient font-medium">client portal</span> experience
         </h2>
-        <p className="text-lg text-gray-400 text-left">
+        <p className="text-lg md:text-xl text-gray-400 text-left">
           Orchestra comes out-of-the-box with a customizable client portal with your domain name and branding. A place you can call your own.
         </p>
       </div>
 
       <Tabs defaultValue={features[0].title} className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Left side - Tab triggers */}
-          <div className="md:col-span-5 space-y-2">
-            <TabsList className="flex flex-col w-full bg-transparent h-auto p-0 space-y-2">
+          <div className="md:col-span-5 space-y-3">
+            <TabsList className="flex flex-col w-full bg-transparent h-auto p-0 space-y-3">
               {features.map((feature) => (
                 <TabsTrigger
                   key={feature.title}
@@ -32,6 +32,7 @@ export const FeaturesSection = () => {
                   <FeatureTab
                     title={feature.title}
                     description={feature.description}
+                    icon={feature.icon}
                     isActive={false}
                   />
                 </TabsTrigger>
