@@ -47,12 +47,12 @@ const Index = () => {
           </span>
         </motion.div>
         
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left"
+            className="text-5xl md:text-7xl font-normal mb-6 tracking-tight"
           >
             Your own first-class
             <br />
@@ -63,7 +63,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl text-left"
+            className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"
           >
             Orchestra comes out-of-the-box with a customizable client portal with your domain name and branding. A place you can call your own.
           </motion.p>
@@ -72,7 +72,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 items-start"
+            className="flex flex-col sm:flex-row gap-4 items-center justify-center"
           >
             <Button size="lg" className="button-gradient rounded-lg">
               Get started free
@@ -102,17 +102,17 @@ const Index = () => {
       {/* Features Section */}
       <section className="container px-4 py-20">
         <Tabs defaultValue={features[0].title} className="w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-4">
               <TabsList className="flex flex-col space-y-4 bg-transparent w-full">
                 {features.map((feature, index) => (
                   <TabsTrigger
                     key={index}
                     value={feature.title}
-                    className="w-full text-left px-4 py-6 glass glass-hover data-[state=active]:bg-white/10"
+                    className="w-full text-left px-6 py-8 glass glass-hover data-[state=active]:bg-white/10 rounded-xl transition-all duration-300"
                   >
                     <div>
-                      <h3 className="text-2xl font-medium mb-2">{feature.title}</h3>
+                      <h3 className="text-2xl font-medium mb-3">{feature.title}</h3>
                       <p className="text-gray-400 text-base leading-relaxed">{feature.description}</p>
                     </div>
                   </TabsTrigger>
@@ -120,7 +120,7 @@ const Index = () => {
               </TabsList>
             </div>
             
-            <div className="relative h-[400px] lg:h-full min-h-[400px]">
+            <div className="relative h-[500px] lg:h-full min-h-[500px] rounded-xl overflow-hidden">
               {features.map((feature, index) => (
                 <TabsContent
                   key={index}
