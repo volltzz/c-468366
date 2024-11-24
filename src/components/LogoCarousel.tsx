@@ -15,12 +15,13 @@ const LogoCarousel = () => {
         <motion.div
           className="flex gap-16 items-center"
           animate={{
-            x: [0, -1920],
+            x: ["0%", "-50%"]
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear",
+            repeatType: "loop"
           }}
         >
           {/* First set of logos */}
