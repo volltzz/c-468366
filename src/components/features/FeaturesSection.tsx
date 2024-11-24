@@ -6,6 +6,18 @@ import { features } from "@/config/features";
 export const FeaturesSection = () => {
   return (
     <section className="container px-4 py-20">
+      {/* Header Section */}
+      <div className="max-w-2xl mb-16">
+        <h2 className="text-4xl md:text-5xl font-normal mb-4 tracking-tight text-left">
+          Your own first-class
+          <br />
+          client portal experience
+        </h2>
+        <p className="text-lg text-gray-400 text-left">
+          Orchestra comes out-of-the-box with a customizable client portal with your domain name and branding. A place you can call your own.
+        </p>
+      </div>
+
       <Tabs defaultValue={features[0].title} className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Left side - Tab triggers */}
@@ -18,7 +30,6 @@ export const FeaturesSection = () => {
                   className="w-full data-[state=active]:shadow-none data-[state=active]:bg-transparent"
                 >
                   <FeatureTab
-                    icon={feature.icon}
                     title={feature.title}
                     description={feature.description}
                     isActive={false}
