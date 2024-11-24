@@ -11,77 +11,43 @@ const LogoCarousel = () => {
 
   return (
     <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-12 mt-20">
-      <div className="relative w-full flex justify-center">
-        <motion.div
-          className="flex gap-16 items-center absolute"
-          initial={{ x: "0%" }}
-          animate={{ x: "-100%" }}
-          transition={{
-            x: {
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-              repeatDelay: -2
-            }
-          }}
-          style={{
-            width: "max-content"
-          }}
-        >
-          {/* First set of logos */}
-          {logos.map((logo, index) => (
-            <motion.img
-              key={`logo-1-${index}`}
-              src={logo}
-              alt={`Partner logo ${index + 1}`}
-              className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              transition={{ duration: 0.5 }}
-              whileHover={{ opacity: 1 }}
-            />
-          ))}
-          {/* Second set of logos */}
-          {logos.map((logo, index) => (
-            <motion.img
-              key={`logo-2-${index}`}
-              src={logo}
-              alt={`Partner logo ${index + 1}`}
-              className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              transition={{ duration: 0.5 }}
-              whileHover={{ opacity: 1 }}
-            />
-          ))}
-          {/* Third set of logos */}
-          {logos.map((logo, index) => (
-            <motion.img
-              key={`logo-3-${index}`}
-              src={logo}
-              alt={`Partner logo ${index + 1}`}
-              className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              transition={{ duration: 0.5 }}
-              whileHover={{ opacity: 1 }}
-            />
-          ))}
-          {/* Fourth set of logos */}
-          {logos.map((logo, index) => (
-            <motion.img
-              key={`logo-4-${index}`}
-              src={logo}
-              alt={`Partner logo ${index + 1}`}
-              className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              transition={{ duration: 0.5 }}
-              whileHover={{ opacity: 1 }}
-            />
-          ))}
-        </motion.div>
+      <div className="relative w-full">
+        <div className="flex overflow-hidden relative">
+          <motion.div
+            className="flex gap-16 items-center"
+            animate={{
+              x: [0, -100],
+              transition: {
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 20,
+                  ease: "linear",
+                },
+              },
+            }}
+            style={{
+              width: "max-content",
+            }}
+          >
+            {[...Array(4)].map((_, setIndex) => (
+              <div key={`set-${setIndex}`} className="flex gap-16 items-center">
+                {logos.map((logo, index) => (
+                  <motion.img
+                    key={`logo-${setIndex}-${index}`}
+                    src={logo}
+                    alt={`Partner logo ${index + 1}`}
+                    className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.5 }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ opacity: 1 }}
+                  />
+                ))}
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );
