@@ -27,8 +27,8 @@ const Navigation = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "h-14 bg-background/40 backdrop-blur-xl border-b border-white/10 scale-95 mx-auto max-w-3xl" 
-          : "h-20 bg-transparent"
+          ? "h-14 bg-[#1B1B1B]/40 backdrop-blur-xl border-b border-white/10 scale-95 mx-auto max-w-3xl" 
+          : "h-20 bg-[#1B1B1B]"
       }`}
     >
       <div className={`mx-auto h-full transition-all duration-300 ${
@@ -70,7 +70,7 @@ const Navigation = () => {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent>
+              <SheetContent className="bg-[#1B1B1B]">
                 <div className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (
                     <a
