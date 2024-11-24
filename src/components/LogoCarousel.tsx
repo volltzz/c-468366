@@ -9,25 +9,28 @@ const LogoCarousel = () => {
     "/lovable-uploads/7cc724d4-3e14-4e7c-9e7a-8d613fde54d0.png",
   ];
 
-  // Double the logos array to ensure seamless looping
   const extendedLogos = [...logos, ...logos, ...logos];
 
   return (
     <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-12 mt-20">
       <motion.div 
         className="flex space-x-16"
+        initial={{ opacity: 0, x: "0%" }}
         animate={{
-          x: ["0%", "-50%"]
+          opacity: 1,
+          x: "-50%"
         }}
         transition={{
+          opacity: { duration: 0.5 },
           x: {
             duration: 25,
             repeat: Infinity,
             ease: "linear",
+            delay: 0.5 // Add delay to let fade-in complete first
           }
         }}
         style={{
-          width: "fit-content", // This ensures the container fits all logos
+          width: "fit-content",
           display: "flex",
           gap: "4rem"
         }}
