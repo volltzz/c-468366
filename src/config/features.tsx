@@ -1,4 +1,4 @@
-import { Mail, Zap, Code2, LineChart, MessageSquare, Settings } from "lucide-react";
+import { Mail, Zap, Code2, LineChart } from "lucide-react";
 
 export const features = [
   {
@@ -24,17 +24,5 @@ export const features = [
     title: "Analytics",
     description: "Deep insights into your email patterns and productivity.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    icon: <MessageSquare className="w-6 h-6" />,
-    title: "Smart Replies",
-    description: "Context-aware response suggestions that sound like you.",
-    image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    icon: <Settings className="w-6 h-6" />,
-    title: "Customizable",
-    description: "Tailor the experience to match your unique workflow.",
-    image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1000&auto=format&fit=crop"
   }
 ];
