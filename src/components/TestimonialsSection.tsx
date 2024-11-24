@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Card } from "./ui/card";
@@ -58,36 +60,47 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.2,
-                ease: "easeOut"
-              }}
-            >
-              <Card className="bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <Avatar className="h-12 w-12">
-                    <AvatarImage src={testimonial.image} />
-                    <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h4 className="font-medium text-white/90">{testimonial.name}</h4>
-                    <p className="text-sm text-white/60">{testimonial.role}</p>
+        <div className="relative flex flex-col antialiased">
+          <div className="relative flex overflow-hidden py-4">
+            <div className="animate-marquee flex min-w-full shrink-0 items-stretch gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={`${index}-1`} className="w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <Avatar className="h-12 w-12">
+                      <AvatarImage src={testimonial.image} />
+                      <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h4 className="font-medium text-white/90">{testimonial.name}</h4>
+                      <p className="text-sm text-white/60">{testimonial.role}</p>
+                    </div>
                   </div>
-                </div>
-                <p className="text-white/70 leading-relaxed">
-                  {testimonial.content}
-                </p>
-              </Card>
-            </motion.div>
-          ))}
+                  <p className="text-white/70 leading-relaxed">
+                    {testimonial.content}
+                  </p>
+                </Card>
+              ))}
+            </div>
+            <div className="animate-marquee flex min-w-full shrink-0 items-stretch gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={`${index}-2`} className="w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <Avatar className="h-12 w-12">
+                      <AvatarImage src={testimonial.image} />
+                      <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h4 className="font-medium text-white/90">{testimonial.name}</h4>
+                      <p className="text-sm text-white/60">{testimonial.role}</p>
+                    </div>
+                  </div>
+                  <p className="text-white/70 leading-relaxed">
+                    {testimonial.content}
+                  </p>
+                </Card>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
