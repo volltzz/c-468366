@@ -19,6 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
+        sans: ['Geist', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
       colors: {
@@ -55,12 +56,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-      },
-      borderRadius: {
-        DEFAULT: "0",
-        lg: "0",
-        md: "0",
-        sm: "0",
       },
       keyframes: {
         "accordion-down": {
