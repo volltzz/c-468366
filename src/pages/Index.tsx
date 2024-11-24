@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-[#0A0A0A] text-foreground">
       <Navigation />
       
       {/* Hero Section */}
@@ -22,10 +22,7 @@ const Index = () => {
       >
         {/* Background */}
         <div 
-          className="absolute inset-0 -z-10"
-          style={{
-            backgroundColor: '#000000',
-          }}
+          className="absolute inset-0 -z-10 bg-[#0A0A0A]"
         />
         
         <motion.div
@@ -97,20 +94,22 @@ const Index = () => {
       <LogoCarousel />
 
       {/* Features Section */}
-      <div id="features">
+      <div id="features" className="bg-[#0A0A0A]">
         <FeaturesSection />
       </div>
 
       {/* Pricing Section */}
-      <div id="pricing">
+      <div id="pricing" className="bg-[#0A0A0A]">
         <PricingSection />
       </div>
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      <div className="bg-[#0A0A0A]">
+        <TestimonialsSection />
+      </div>
 
       {/* CTA Section */}
-      <section className="container px-4 py-20 relative">
+      <section className="container px-4 py-20 relative bg-[#0A0A0A]">
         <div className="absolute inset-0 opacity-40">
           <img 
             src="/lovable-uploads/a2c0bb3a-a47b-40bf-ba26-d79f2f9e741b.png" 
@@ -138,7 +137,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <Footer />
+      <div className="bg-[#0A0A0A]">
+        <Footer />
+      </div>
     </div>
   );
 };
