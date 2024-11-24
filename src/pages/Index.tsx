@@ -82,7 +82,7 @@ const Index = () => {
         >
           <div className="glass rounded-xl overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              src="/lovable-uploads/c32c6788-5e4a-4fee-afee-604b03113c7f.png"
               alt="CryptoTrade Dashboard"
               className="w-full h-auto"
             />
