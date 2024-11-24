@@ -11,7 +11,7 @@ const LogoCarousel = () => {
 
   return (
     <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-12 mt-20">
-      <div className="relative w-full">
+      <div className="relative w-full flex justify-center">
         <motion.div
           className="flex gap-16 items-center absolute"
           animate={{
