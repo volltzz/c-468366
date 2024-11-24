@@ -43,21 +43,8 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 overflow-hidden relative">
-      {/* Globe gradient background */}
-      <div className="absolute inset-0 bg-black">
-        <div 
-          className="absolute inset-0 opacity-40"
-          style={{
-            background: 'radial-gradient(circle at 50% 50%, rgba(74,222,128,0.1) 0%, rgba(0,0,0,0) 70%)',
-          }}
-        />
-        {/* Fade overlays */}
-        <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black to-transparent" />
-        <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black to-transparent" />
-      </div>
-
-      <div className="container px-4 relative z-10">
+    <section className="py-20 overflow-hidden bg-gradient-to-b from-background to-black">
+      <div className="container px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
