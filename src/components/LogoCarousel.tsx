@@ -14,14 +14,19 @@ const LogoCarousel = () => {
       <div className="relative w-full flex justify-center">
         <motion.div
           className="flex gap-16 items-center absolute"
+          initial={{ opacity: 0, x: "100%" }}
           animate={{
+            opacity: 1,
             x: [0, "-100%"]
           }}
           transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-            repeatType: "loop"
+            opacity: { duration: 0.5 },
+            x: {
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop"
+            }
           }}
           style={{
             width: "max-content"
@@ -29,20 +34,28 @@ const LogoCarousel = () => {
         >
           {/* First set of logos */}
           {logos.map((logo, index) => (
-            <img
+            <motion.img
               key={`logo-1-${index}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
               className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ opacity: 1 }}
             />
           ))}
           {/* Duplicate set of logos for seamless loop */}
           {logos.map((logo, index) => (
-            <img
+            <motion.img
               key={`logo-2-${index}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
               className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ opacity: 1 }}
             />
           ))}
         </motion.div>
