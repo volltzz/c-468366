@@ -16,14 +16,12 @@ const Index = () => {
         transition={{ duration: 0.5 }}
         className="relative container px-4 pt-40 pb-20"
       >
-        {/* Background Image */}
+        {/* Gradient Background */}
         <div 
           className="absolute inset-0 -z-10"
           style={{
-            backgroundImage: "url('/lovable-uploads/e143cef1-4ad0-404b-b47a-147e89bc017c.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.9,
+            background: 'linear-gradient(225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)',
+            opacity: 0.15,
           }}
         />
         
