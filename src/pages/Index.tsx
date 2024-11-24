@@ -20,8 +20,8 @@ const Index = () => {
         <div 
           className="absolute inset-0 -z-10"
           style={{
-            background: 'linear-gradient(225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)',
-            opacity: 0.15,
+            background: 'radial-gradient(circle at bottom right, rgb(34, 197, 94) 0%, rgb(0, 0, 0) 85%)',
+            opacity: 0.5,
           }}
         />
         
