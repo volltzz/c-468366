@@ -24,7 +24,7 @@ const Navigation = () => {
   };
 
   const scrollToBottomCTA = () => {
-    const ctaSection = document.querySelector('section:last-of-type');
+    const ctaSection = document.querySelector('h2:contains("Ready to start trading?")');
     if (ctaSection) {
       ctaSection.scrollIntoView({ behavior: 'smooth' });
     }
