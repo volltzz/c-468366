@@ -24,6 +24,13 @@ const Navigation = () => {
         const y = testimonialSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
+    } else if (sectionId === 'cta') {
+      const ctaSection = document.querySelector('.button-gradient');
+      if (ctaSection) {
+        const yOffset = -100;
+        const y = ctaSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     } else {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -70,6 +77,13 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
+            <Button 
+              onClick={() => scrollToSection('cta')}
+              size="sm"
+              className="button-gradient"
+            >
+              Start Trading
+            </Button>
           </div>
 
           {/* Mobile Navigation */}
@@ -98,6 +112,15 @@ const Navigation = () => {
                       {item.name}
                     </a>
                   ))}
+                  <Button 
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      scrollToSection('cta');
+                    }}
+                    className="button-gradient mt-4"
+                  >
+                    Start Trading
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
