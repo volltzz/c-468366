@@ -14,19 +14,15 @@ const LogoCarousel = () => {
       <div className="relative w-full flex justify-center">
         <motion.div
           className="flex gap-16 items-center absolute"
-          initial={{ opacity: 0, x: "100%" }}
-          animate={{
-            opacity: 1,
-            x: "-100%"
-          }}
+          initial={{ x: "0%" }}
+          animate={{ x: "-100%" }}
           transition={{
-            opacity: { duration: 0.5 },
             x: {
               duration: 20,
               repeat: Infinity,
               ease: "linear",
               repeatType: "loop",
-              repeatDelay: -2 // Negative delay to start the next iteration before the current one ends
+              repeatDelay: -2
             }
           }}
           style={{
