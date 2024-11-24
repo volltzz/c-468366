@@ -6,9 +6,7 @@ const Footer = () => {
     <footer className="w-full py-12 mt-20">
       <div className="container px-4">
         <div className="glass glass-hover rounded-xl p-8">
-          {/* Company Info */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company Info */}
             <div className="space-y-4">
               <h3 className="font-medium text-lg">CryptoTrade</h3>
               <p className="text-sm text-muted-foreground">
@@ -24,7 +22,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Product Links */}
             <div className="space-y-4">
               <h4 className="font-medium">Trading</h4>
               <ul className="space-y-2">
@@ -41,7 +38,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Resources Links */}
             <div className="space-y-4">
               <h4 className="font-medium">Resources</h4>
               <ul className="space-y-2">
@@ -58,7 +54,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Legal Links */}
             <div className="space-y-4">
               <h4 className="font-medium">Legal</h4>
               <ul className="space-y-2">

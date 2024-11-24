@@ -43,7 +43,7 @@ const PricingTier = ({
       ))}
     </ul>
     <Button className={isPopular ? "button-gradient w-full" : "w-full"} variant={isPopular ? "default" : "outline"}>
-      Get Started
+      Start Trading
     </Button>
   </motion.div>
 );
@@ -51,7 +51,6 @@ const PricingTier = ({
 export const PricingSection = () => {
   return (
     <section className="container px-4 py-24">
-      {/* Header */}
       <div className="max-w-2xl mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -59,8 +58,8 @@ export const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="text-5xl md:text-6xl font-normal mb-6"
         >
-          Simple,{" "}
-          <span className="text-gradient font-medium">transparent</span> pricing
+          Choose Your{" "}
+          <span className="text-gradient font-medium">Trading Plan</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -68,47 +67,46 @@ export const PricingSection = () => {
           transition={{ delay: 0.1, duration: 0.5 }}
           className="text-lg text-gray-400"
         >
-          Choose the perfect plan for your business needs. All plans include a 14-day free trial.
+          Select the perfect trading plan with advanced features and competitive fees
         </motion.p>
       </div>
 
-      {/* Pricing Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <PricingTier
-          name="Starter"
-          price="$29"
-          description="Perfect for small businesses and freelancers"
+          name="Basic Trader"
+          price="$0"
+          description="Perfect for beginners starting their crypto journey"
           features={[
-            "Up to 1,000 emails/month",
-            "Basic email analytics",
-            "2 team members",
-            "24/7 email support"
+            "Basic spot trading",
+            "Market & limit orders",
+            "Basic market analysis",
+            "Email support"
           ]}
         />
         <PricingTier
-          name="Professional"
-          price="$99"
-          description="Ideal for growing businesses"
+          name="Pro Trader"
+          price="$29"
+          description="Advanced features for serious traders"
           features={[
-            "Up to 10,000 emails/month",
-            "Advanced analytics",
-            "10 team members",
+            "Advanced trading tools",
+            "Margin trading up to 10x",
+            "Advanced technical analysis",
             "Priority support",
-            "Custom integrations"
+            "API access"
           ]}
           isPopular
         />
         <PricingTier
-          name="Enterprise"
+          name="Institutional"
           price="Custom"
-          description="For large organizations with custom needs"
+          description="Enterprise-grade solutions for institutions"
           features={[
-            "Unlimited emails",
-            "Custom analytics",
-            "Unlimited team members",
-            "24/7 phone support",
+            "Custom trading solutions",
+            "Unlimited trading volume",
+            "OTC desk access",
             "Dedicated account manager",
-            "Custom development"
+            "Custom API integration",
+            "24/7 priority support"
           ]}
         />
       </div>

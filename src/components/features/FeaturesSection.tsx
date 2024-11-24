@@ -9,12 +9,12 @@ export const FeaturesSection = () => {
       {/* Header Section */}
       <div className="max-w-2xl mb-20">
         <h2 className="text-5xl md:text-6xl font-normal mb-6 tracking-tight text-left">
-          Your own first-class
+          Advanced Trading
           <br />
-          <span className="text-gradient font-medium">client portal</span> experience
+          <span className="text-gradient font-medium">Features & Tools</span>
         </h2>
         <p className="text-lg md:text-xl text-gray-400 text-left">
-          Orchestra comes out-of-the-box with a customizable client portal with your domain name and branding. A place you can call your own.
+          Experience professional-grade trading tools and features designed for both novice and experienced crypto traders.
         </p>
       </div>
 
