@@ -25,39 +25,31 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-3.5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 rounded-full ${
         isScrolled 
-          ? "h-14 bg-[#1B1B1B]/40 backdrop-blur-xl border-b border-white/10 scale-95 mx-auto max-w-3xl" 
-          : "h-20 bg-[#1B1B1B]"
+          ? "h-14 bg-[#1B1B1B]/40 backdrop-blur-xl border border-white/10 scale-95 w-[90%] max-w-2xl" 
+          : "h-14 bg-[#1B1B1B] w-[95%] max-w-3xl"
       }`}
     >
-      <div className={`mx-auto h-full transition-all duration-300 ${
-        isScrolled ? "max-w-3xl px-4" : "container px-4"
-      }`}>
+      <div className="mx-auto h-full px-6">
         <nav className="flex items-center justify-between h-full">
-          <div className={`flex items-center gap-2 transition-all duration-300 ${
-            isScrolled ? "scale-90" : ""
-          }`}>
-            <Command className="w-6 h-6 text-primary" />
-            <span className="font-bold text-lg">EmailAI</span>
+          <div className="flex items-center gap-2">
+            <Command className="w-5 h-5 text-primary" />
+            <span className="font-bold text-base">EmailAI</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className={`text-sm text-muted-foreground hover:text-foreground transition-all duration-300 ${
-                  isScrolled ? "scale-90" : ""
-                }`}
+                className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
               >
                 {item.name}
               </a>
             ))}
-            <Button className={`button-gradient transition-all duration-300 ${
-              isScrolled ? "scale-90" : ""
-            }`}>
+            <Button className="button-gradient">
               Get Started
             </Button>
           </div>
