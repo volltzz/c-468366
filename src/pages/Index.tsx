@@ -127,17 +127,17 @@ const Index = () => {
               ))}
             </div>
 
-            <div className="space-y-6">
-              <TabsList className="flex flex-col space-y-6 bg-transparent w-full">
+            <div className="space-y-4">
+              <TabsList className="flex flex-col space-y-2 bg-transparent w-full">
                 {features.map((feature, index) => (
                   <TabsTrigger
                     key={index}
                     value={feature.title}
-                    className="w-full text-left px-8 py-8 glass glass-hover data-[state=active]:bg-white/10 rounded-2xl transition-all duration-300"
+                    className="w-full text-left px-6 py-6 bg-transparent hover:bg-white/5 data-[state=active]:bg-white/5 rounded-xl transition-all duration-300 border border-white/10"
                   >
-                    <div className="border-l-2 border-transparent data-[state=active]:border-primary pl-6">
-                      <h3 className="text-2xl font-medium mb-3">{feature.title}</h3>
-                      <p className="text-gray-400 text-base leading-relaxed pr-8">{feature.description}</p>
+                    <div className="border-l-[3px] border-transparent data-[state=active]:border-primary pl-4">
+                      <h3 className="text-xl font-medium mb-2">{feature.title}</h3>
+                      <p className="text-gray-400 text-sm leading-relaxed pr-6">{feature.description}</p>
                     </div>
                   </TabsTrigger>
                 ))}
