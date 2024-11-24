@@ -11,78 +11,75 @@ const LogoCarousel = () => {
 
   return (
     <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-12 mt-20">
-      <div className="relative w-full">
-        <div className="flex overflow-hidden relative">
-          <motion.div
-            className="flex gap-16 items-center"
-            animate={{
-              x: "-100%",
-            }}
-            transition={{
+      <div className="relative flex overflow-x-hidden">
+        {/* First row of logos */}
+        <motion.div
+          className="flex space-x-16 animate-marquee whitespace-nowrap"
+          animate={{
+            x: [0, -1920], // Assuming a standard width, adjust if needed
+          }}
+          transition={{
+            x: {
               duration: 20,
               repeat: Infinity,
               ease: "linear",
-            }}
-            style={{
-              width: "max-content",
-              paddingLeft: "100%",
-            }}
-          >
-            {[...Array(2)].map((_, setIndex) => (
-              <div key={`set-${setIndex}`} className="flex gap-16 items-center">
-                {logos.map((logo, index) => (
-                  <motion.img
-                    key={`logo-${setIndex}-${index}`}
-                    src={logo}
-                    alt={`Partner logo ${index + 1}`}
-                    className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                    whileHover={{ opacity: 1 }}
-                  />
-                ))}
-              </div>
-            ))}
-          </motion.div>
-          
-          {/* Second carousel for continuous effect */}
-          <motion.div
-            className="flex gap-16 items-center absolute top-0 left-0"
-            animate={{
-              x: "0%",
-            }}
-            initial={{
-              x: "-200%",
-            }}
-            transition={{
+            },
+          }}
+        >
+          {[...Array(2)].map((_, i) => (
+            <div key={`row1-${i}`} className="flex space-x-16">
+              {logos.map((logo, index) => (
+                <motion.img
+                  key={`logo1-${i}-${index}`}
+                  src={logo}
+                  alt={`Partner logo ${index + 1}`}
+                  className="h-8 object-contain"
+                  initial={{ opacity: 0.5 }}
+                  whileHover={{ 
+                    opacity: 1,
+                    scale: 1.05,
+                    transition: { duration: 0.2 }
+                  }}
+                />
+              ))}
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Second row of logos (offset for seamless loop) */}
+        <motion.div
+          className="flex space-x-16 animate-marquee whitespace-nowrap absolute top-0"
+          initial={{ x: 1920 }} // Start from outside the viewport
+          animate={{
+            x: [1920, 0], // Move to visible area
+          }}
+          transition={{
+            x: {
               duration: 20,
               repeat: Infinity,
               ease: "linear",
-            }}
-            style={{
-              width: "max-content",
-              paddingLeft: "100%",
-            }}
-          >
-            {[...Array(2)].map((_, setIndex) => (
-              <div key={`set2-${setIndex}`} className="flex gap-16 items-center">
-                {logos.map((logo, index) => (
-                  <motion.img
-                    key={`logo2-${setIndex}-${index}`}
-                    src={logo}
-                    alt={`Partner logo ${index + 1}`}
-                    className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                    whileHover={{ opacity: 1 }}
-                  />
-                ))}
-              </div>
-            ))}
-          </motion.div>
-        </div>
+            },
+          }}
+        >
+          {[...Array(2)].map((_, i) => (
+            <div key={`row2-${i}`} className="flex space-x-16">
+              {logos.map((logo, index) => (
+                <motion.img
+                  key={`logo2-${i}-${index}`}
+                  src={logo}
+                  alt={`Partner logo ${index + 1}`}
+                  className="h-8 object-contain"
+                  initial={{ opacity: 0.5 }}
+                  whileHover={{ 
+                    opacity: 1,
+                    scale: 1.05,
+                    transition: { duration: 0.2 }
+                  }}
+                />
+              ))}
+            </div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
