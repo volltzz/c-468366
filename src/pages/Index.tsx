@@ -110,13 +110,14 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="container px-4 py-20 relative bg-[#0A0A0A]">
-        <div className="absolute inset-0 opacity-40">
-          <img 
-            src="/lovable-uploads/a2c0bb3a-a47b-40bf-ba26-d79f2f9e741b.png" 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <div 
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: 'url("/lovable-uploads/0dbe1b75-2c74-4ff8-ba55-4be4d74abe72.png")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
