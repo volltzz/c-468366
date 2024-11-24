@@ -17,7 +17,7 @@ const LogoCarousel = () => {
           initial={{ opacity: 0, x: "100%" }}
           animate={{
             opacity: 1,
-            x: [0, "-100%"]
+            x: "-100%"
           }}
           transition={{
             opacity: { duration: 0.5 },
@@ -25,7 +25,8 @@ const LogoCarousel = () => {
               duration: 20,
               repeat: Infinity,
               ease: "linear",
-              repeatType: "loop"
+              repeatType: "loop",
+              repeatDelay: -2 // Negative delay to start the next iteration before the current one ends
             }
           }}
           style={{
@@ -62,6 +63,19 @@ const LogoCarousel = () => {
           {logos.map((logo, index) => (
             <motion.img
               key={`logo-3-${index}`}
+              src={logo}
+              alt={`Partner logo ${index + 1}`}
+              className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ opacity: 1 }}
+            />
+          ))}
+          {/* Fourth set of logos */}
+          {logos.map((logo, index) => (
+            <motion.img
+              key={`logo-4-${index}`}
               src={logo}
               alt={`Partner logo ${index + 1}`}
               className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"
