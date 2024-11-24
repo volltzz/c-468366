@@ -23,10 +23,10 @@ const LogoCarousel = () => {
         transition={{
           opacity: { duration: 0.5 },
           x: {
-            duration: 25,
+            duration: 15, // Reduced from 25 to 15 seconds
             repeat: Infinity,
             ease: "linear",
-            delay: 0.5 // Add delay to let fade-in complete first
+            delay: 0.5
           }
         }}
         style={{
