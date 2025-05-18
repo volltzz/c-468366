@@ -1,5 +1,7 @@
+
 import { Github, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -41,6 +43,11 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="font-medium">Resources</h4>
               <ul className="space-y-2">
+                <li>
+                  <Link to="/api-docs" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    API Documentation
+                  </Link>
+                </li>
                 <li>
                   <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     Trading Guide
